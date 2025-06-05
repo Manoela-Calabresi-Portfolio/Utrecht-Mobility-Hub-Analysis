@@ -242,4 +242,4 @@ Cluster labels assigned to each hex, visualizations of group characteristics, an
 
 Project by Manoela Calabresi
 📧 manoela.calabresi@gmail.com
-🌍 https://bit.ly/Utrecht_Mobility_Analysis
+🌍(https://www.linkedin.com/in/manoela-calabresi/)
