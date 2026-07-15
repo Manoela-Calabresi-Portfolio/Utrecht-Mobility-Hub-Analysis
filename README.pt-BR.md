@@ -1,74 +1,72 @@
-# Manoela Calabresi · Portfólio técnico em português-BR
+# Utrecht · Hubs de mobilidade e lacunas territoriais
 
-Após atuar em escritórios de arquitetura na Alemanha, fundei a Ombu Lab, iniciativa de inteligência territorial com atuação no Brasil. Este portfólio reúne projetos que articulam dados censitários, mobilidade, bases públicas e leitura espacial para apoiar planejamento urbano, avaliação territorial e decisão locacional.
+Relatório resumido em português-BR do projeto **Utrecht Mobility Hub Analysis**.
 
-## Projetos em destaque
+## Pergunta central
 
-| Projeto | O que demonstra | Página pt-BR |
-|---|---|---|
-| Utrecht · Hubs de mobilidade | análise espacial, mobilidade, acessibilidade e mapas | [Abrir](repositorios/utrecht-mobility-hub-analysis.pt-BR.md) |
-| ETL de geodados | dados secundários, georreferenciamento e organização de bases | [Abrir](repositorios/etl-geodata-pipeline.pt-BR.md) |
-| Atlas urbano de Curitiba | cruzamentos territoriais, zoneamento, transporte e mercado | [Abrir](repositorios/atlas-mercado-curitiba.pt-BR.md) |
-| IBGE/SIDRA | indicadores censitários, descoberta de tabelas e infraestrutura analítica | [Abrir](repositorios/ombu-ibge-sidra.pt-BR.md) |
+Onde reforçar ou implantar hubs de mobilidade na Província de Utrecht para responder ao crescimento da demanda e melhorar o acesso multimodal.
 
-## 1. Utrecht · Hubs de mobilidade
+## Síntese do projeto
 
-Estudo espacial sobre mobilidade compartilhada e lacunas de infraestrutura na Província de Utrecht. O projeto cruza demanda urbana, oferta de transporte e cobertura territorial para identificar áreas prioritárias para intervenção.
+O estudo cruza demanda urbana, moradia, empregos, transporte público, shared mobility e hubs existentes em uma grade hexagonal de 250 metros. A partir dessas camadas, o projeto identifica áreas com desequilíbrio entre cobertura de infraestrutura e pressão de demanda.
 
-![Mapa de acesso ao transporte público em Utrecht](2.0_notebooks/0.0_outputs/pt_access/pt_access_score_map.png)
+**Relatório completo em PDF:** [3.0_report/Utrecht_Mobility_Hub_Analysis_Full_Report.pdf](3.0_report/Utrecht_Mobility_Hub_Analysis_Full_Report.pdf)
 
-O que mostra:
-- mobilidade sustentável e acessibilidade urbana;
-- análise espacial aplicada a transporte público;
-- mapas e síntese territorial para decisão.
+## Método
 
-[Ver página pt-BR do caso](repositorios/utrecht-mobility-hub-analysis.pt-BR.md)
+```mermaid
+flowchart LR
+    A[Fontes públicas e APIs] --> B[Limpeza e padronização]
+    B --> C[Agregação espacial em hexágonos]
+    C --> D[Indicadores de demanda e oferta]
+    D --> E[UMAP e HDBSCAN]
+    E --> F[Mapas de lacunas e priorização]
+```
 
-## 2. ETL de geodados
+## Bases utilizadas
 
-Pipeline reprodutível para baixar, limpar, padronizar e organizar dados geoespaciais abertos. A ênfase está em transformar bases públicas dispersas em insumos consistentes para análise territorial.
+- moradia e crescimento habitacional;
+- empregos ponderados por modo;
+- transporte público;
+- hubs existentes;
+- OV-fiets e shared mobility;
+- rede cicloviária.
 
-O que mostra:
-- uso de dados secundários e administrativos;
-- georreferenciamento e padronização de camadas;
-- infraestrutura técnica para indicadores, mapas e painéis.
+## Mapas principais
 
-[Ver página pt-BR do caso](repositorios/etl-geodata-pipeline.pt-BR.md)
+### Empregos ponderados
 
-## 3. Atlas urbano de Curitiba
+![Empregos ponderados](2.0_notebooks/0.0_outputs/job_maps/job_weighted_graduated.png)
 
-Caso de modelagem territorial em escala de cidade para cruzar licenciamento, cadastro, zoneamento, oferta urbana e eixos de transporte em um mesmo ambiente analítico.
+### Moradia e crescimento
 
-O que mostra:
-- inteligência territorial aplicada;
-- integração entre bases urbanas e mercado;
-- leitura espacial para localização e desenvolvimento.
+![Moradia e crescimento](2.0_notebooks/0.0_outputs/housing_maps/housing_density_maps.png)
 
-[Ver página pt-BR do caso](repositorios/atlas-mercado-curitiba.pt-BR.md)
+### Shared mobility
 
-## 4. IBGE/SIDRA
+![Shared mobility](2.0_notebooks/0.0_outputs/shared_mobility/vehicle_availability_map.png)
 
-Estrutura da Ombu para descoberta, coleta e organização de tabelas censitárias, transformando o SIDRA em base utilizável para indicadores territoriais e cruzamentos com outras camadas públicas.
+### Acesso ao transporte público
 
-O que mostra:
-- uso de dados censitários e indicadores urbanos;
-- organização de infraestrutura analítica;
-- conexão entre dado tabular e leitura espacial.
+![Acesso ao transporte público](2.0_notebooks/0.0_outputs/pt_access/pt_access_score_map.png)
 
-[Ver página pt-BR do caso](repositorios/ombu-ibge-sidra.pt-BR.md)
+## Resultados
 
-## O que este portfólio demonstra
+- identificação de áreas com cobertura mais frágil;
+- leitura territorial de lacunas de mobilidade;
+- priorização de zonas críticas;
+- apoio a planejamento de hubs e integração modal.
 
-- análise de dados secundários;
-- georreferenciamento e análise espacial;
-- uso de OpenStreetMap, bases censitárias e dados administrativos;
-- construção de indicadores urbanos;
-- mapas, painéis e visualizações territoriais;
-- mobilidade, acessibilidade e leitura de desigualdades;
-- produção de síntese técnica em linguagem acessível.
+## Relevância
 
-## Contato
+Mobilidade sustentável, transporte público, acessibilidade urbana, análise espacial e visualização territorial.
 
-- [LinkedIn](https://www.linkedin.com/in/manoela-calabresi/)
-- [manoela.calabresi@gmail.com](mailto:manoela.calabresi@gmail.com)
-- GitHub: [Manoela-Calabresi-Portfolio](https://github.com/Manoela-Calabresi-Portfolio)
+## Estrutura do repositório
+
+- `2.0_notebooks/` notebooks e mapas gerados;
+- `3.0_report/` relatório completo em PDF;
+- `requirements.txt` dependências do projeto.
+
+## Ver arquivos do projeto
+
+[Abrir repositório completo](https://github.com/Manoela-Calabresi-Portfolio/Utrecht-Mobility-Hub-Analysis)
