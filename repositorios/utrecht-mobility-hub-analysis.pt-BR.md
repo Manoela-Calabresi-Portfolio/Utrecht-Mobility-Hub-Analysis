@@ -1,49 +1,46 @@
-# Utrecht · Análise de hubs de mobilidade
+# Utrecht · Hubs de mobilidade e lacunas territoriais
 
 **Repositório original:** https://github.com/Manoela-Calabresi-Portfolio/Utrecht-Mobility-Hub-Analysis
 
-Estudo espacial sobre mobilidade compartilhada e lacunas de infraestrutura na Província de Utrecht. O projeto cruza demanda urbana, oferta de transporte e cobertura territorial para identificar áreas críticas e apoiar priorização de intervenção.
+Estudo espacial sobre mobilidade compartilhada, acesso ao transporte público e cobertura territorial na Província de Utrecht.
 
-![Mapa de acesso ao transporte público em Utrecht](../2.0_notebooks/0.0_outputs/pt_access/pt_access_score_map.png)
+![Mapa de acesso ao transporte público em Utrecht](../assets/cases/utrecht-pt-access-map.jpg)
 
-## Pergunta que o projeto responde
+## O que este caso mostra
 
-Onde a infraestrutura de hubs de mobilidade pode ser reforçada para responder ao crescimento da demanda e ampliar o acesso multimodal de forma territorialmente mais equilibrada.
+- onde a cobertura de mobilidade é mais frágil;
+- onde demanda e infraestrutura estão mais desequilibradas;
+- como transformar dados de mobilidade em leitura territorial clara.
 
 ## Bases utilizadas
 
-- dados de transporte público;
+- transporte público;
 - shared mobility;
 - moradia e empregos;
-- camadas territoriais e grade hexagonal.
+- grade hexagonal e camadas territoriais.
 
 ## Método
 
-- limpeza e padronização das bases;
-- agregação espacial em hexágonos;
-- construção de scores de demanda e oferta;
-- UMAP + HDBSCAN para leitura de padrões territoriais;
-- mapas de lacunas e áreas prioritárias.
+```mermaid
+flowchart LR
+    A[Dados de mobilidade] --> B[Limpeza e padronização]
+    B --> C[Agregação espacial]
+    C --> D[Scores de demanda e oferta]
+    D --> E[Clusters e lacunas]
+    E --> F[Mapas e priorização]
+```
 
-## O que o projeto entrega
+## Entregas
 
 - mapas temáticos;
 - leitura de acessibilidade;
 - score de lacunas;
-- síntese analítica para planejamento.
+- síntese para planejamento.
 
 ## Ferramentas
 
-- Python
-- GeoPandas
-- QGIS
-- UMAP
-- HDBSCAN
+Python · GeoPandas · QGIS · UMAP · HDBSCAN
 
 ## Relevância
 
-- mobilidade sustentável;
-- transporte público;
-- acessibilidade urbana;
-- visualização territorial;
-- análise espacial aplicada.
+Mobilidade sustentável, transporte público, acessibilidade urbana e análise espacial aplicada.

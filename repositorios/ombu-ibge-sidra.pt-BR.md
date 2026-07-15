@@ -1,43 +1,41 @@
 # Ombu · IBGE/SIDRA e indicadores censitários
 
-Caso técnico centrado na estrutura da Ombu para descoberta, coleta e organização de tabelas do IBGE/SIDRA. O objetivo é transformar dados censitários em insumos utilizáveis para leitura territorial, indicadores urbanos e cruzamentos com outras bases públicas.
+Estrutura para descobrir, coletar e organizar tabelas do IBGE/SIDRA e transformar dados censitários em indicadores utilizáveis para leitura territorial.
 
-## Problema que o projeto resolve
+## O que este caso mostra
 
-O portal SIDRA nem sempre oferece um fluxo simples para descoberta e reaproveitamento de tabelas. O caso organiza um resolvedor híbrido para reduzir atrito entre busca, coleta e uso analítico.
+- como tornar o SIDRA operacional para uso real;
+- como ligar tabela censitária a análise espacial;
+- como montar uma base para renda, domicílio e escolaridade.
+
+## Esquema do fluxo
+
+```mermaid
+flowchart LR
+    A[Busca por tema] --> B[API / scraping / seeds]
+    B --> C[Cache e catálogo]
+    C --> D[Seleção de variáveis]
+    D --> E[Indicadores]
+    E --> F[Mapas e análise territorial]
+```
 
 ## Bases utilizadas
 
 - tabelas do IBGE/SIDRA;
 - catálogos e seeds confirmados;
-- dados territoriais para integração posterior.
+- bases territoriais para integração posterior.
 
-## Método
+## Entregas
 
-- busca por palavra-chave;
-- fallback entre API, scraping e seeds;
-- cache local para reaproveitar descobertas;
-- atualização de catálogo para renda, domicílios e escolaridade;
-- integração com leituras territoriais em nível municipal e setorial.
-
-## O que o projeto entrega
-
-- infraestrutura para descoberta de tabelas;
-- base censitária mais utilizável;
-- apoio à construção de indicadores urbanos;
-- conexão entre dado tabular e análise espacial.
+- descoberta mais confiável de tabelas;
+- base censitária organizada;
+- apoio à construção de indicadores;
+- conexão entre dado tabular e território.
 
 ## Ferramentas
 
-- Python
-- SIDRA API
-- resolvedor híbrido
-- cache YAML
-- catálogo de datasets
+Python · SIDRA API · resolvedor híbrido · cache YAML
 
 ## Relevância
 
-- dados censitários e indicadores urbanos;
-- bases públicas e dados secundários;
-- infraestrutura analítica;
-- apoio a mapas, painéis e relatórios territoriais.
+Dados censitários, indicadores urbanos, bases públicas e infraestrutura analítica para mapas, painéis e relatórios.

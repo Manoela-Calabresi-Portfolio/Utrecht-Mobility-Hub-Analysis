@@ -1,43 +1,46 @@
-# Ombu · Atlas urbano de Curitiba
+# Ombu · Atlas urbano de Curitiba e definição de submercados
 
-Caso de modelagem territorial em escala de cidade para cruzar licenciamento, cadastro, zoneamento, oferta urbana e eixos de transporte em um mesmo ambiente analítico.
+Caso de modelagem territorial em escala de cidade para definir submercados urbanos a partir de zoneamento, oferta, centralidades e eixos estruturais.
 
-## Pergunta que o projeto responde
+![Mapa de submercados territoriais de Curitiba](../assets/cases/atlas-curitiba-submercados.jpg)
 
-Como organizar diferentes bases urbanas em uma estrutura coerente de leitura territorial, útil para decisão locacional, análise urbana e produção de mapas editoriais.
+## O que este caso mostra
+
+- definição de submercados de forma auditável;
+- leitura territorial de centralidades e estrutura urbana;
+- cruzamento entre zoneamento, oferta e transporte;
+- apoio a decisão locacional e desenvolvimento.
+
+## Como os submercados são construídos
+
+```mermaid
+flowchart LR
+    A[Zoneamento] --> E[Modelo territorial]
+    B[Oferta urbana] --> E
+    C[Eixos estruturais] --> E
+    D[Cadastro e licenciamento] --> E
+    E --> F[Submercados]
+    F --> G[Mapa e leitura locacional]
+```
 
 ## Bases utilizadas
 
-- licenciamento e cadastro;
 - zoneamento;
-- camadas de transporte;
-- oferta urbana e mercado.
+- cadastro e licenciamento;
+- oferta urbana;
+- eixos estruturais e transporte.
 
-## Método
+## Entregas
 
-- organização das fontes em camadas estáveis;
-- normalização espacial e tabular;
-- cruzamentos territoriais auditáveis;
-- criação de visões derivadas para leitura analítica;
-- exportação de artefatos para mapas e síntese.
-
-## O que o projeto entrega
-
-- infraestrutura analítica urbana;
-- cruzamentos entre território e mercado;
+- definição de submercados;
+- base analítica em PostGIS;
 - camadas derivadas para mapas;
-- leitura territorial replicável.
+- leitura territorial comparável.
 
 ## Ferramentas
 
-- PostGIS
-- SQL espacial
-- Python
-- GeoJSON
+PostGIS · SQL espacial · Python · GeoJSON
 
 ## Relevância
 
-- inteligência territorial aplicada;
-- integração entre bases públicas e leitura urbana;
-- georreferenciamento e análise espacial;
-- apoio a localização e desenvolvimento imobiliário.
+Inteligência territorial aplicada, georreferenciamento, modelagem espacial e leitura urbana em escala de cidade.
